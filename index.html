@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --pumpkin: #ef871d;
+        --peel: #be3d1e;
+        --pumpkin-dark: #ea5621;
+        --shadow: #dbdbdb;
+      }
+      .wrapper {
+        position: relative;
+        padding-left: 92px;
+        height: 300px;
+      }
+      .wrapper * {
+        position: relative;
+      }
+      .pumpkin {
+        background-color: var(--pumpkin);
+        width: 200px;
+        height: 157px;
+        top: 94px;
+        border-radius: 126px;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .pumpkin-hole {
+        background-color: var(--peel);
+        content: '';
+        width: 30px;
+        height: 18px;
+        left: 20px;
+        z-index: 1;
+      }
+      .pumpkin-hole::before {
+        background-color: var(--peel);
+        content: '';
+        width: 30px;
+        height: 18px;
+      }
+      .pumpkin-line {
+        height: calc(100%);
+        border-style: solid;
+        border-color: var(--pumpkin-dark);
+        display: inline-block;
+        position: absolute;
+        top: -1px;
+      }
+      .line-left {
+        width: 67px;
+        border-radius: 314px 0 0 314px;
+        border-width: 2px 0 2px 6px;
+        left: 23px;
+      }
+      .line-center {
+        width: 35px;
+        border-radius: 50% 0 0 50%;
+        border-width: 2px 0 2px 5px;
+        left: 81px;
+      }
+      .line-center-right {
+        border-radius: 0 50% 50% 0;
+        border-width: 2px 5px 2px 0;
+        right: 45px;
+        width: 111px;
+      }
+      .line-right {
+        width: 67px;
+        border-radius: 0 314px 314px 0;
+        border-width: 3px 6px 3px 0;
+        right: 12px;
+      }
+      .shadow {
+        width: 175px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--shadow);
+        top: 85px;
+        left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="pumpkin">
+        <div class="pumpkin-hole"></div>
+        <div class="pumpkin-line line-left"></div>
+        <div class="pumpkin-line line-center"></div>
+        <div class="pumpkin-line line-center-right"></div>
+        <div class="pumpkin-line line-right"></div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </body>
+</html>

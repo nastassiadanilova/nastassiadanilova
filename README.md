@@ -1,5 +1,9 @@
 ### Hi there 👋
 
+![](./halloween.svg)
+
+🎃 made with CSS only. To be continued...
+
 <!--
 **nastassiadanilova/nastassiadanilova** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
