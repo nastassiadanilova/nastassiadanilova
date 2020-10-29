@@ -3,70 +3,160 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .wrapper {
-          position: relative;
-          padding-left: 92px;
-          height: 300px;
-          width: 400px;
-        }
-        .wrapper * {
-          position: relative;
-        }
-        .pumpkin {
-          background-color: #ef871d;
-          width: 200px;
-          height: 157px;
-          top: 94px;
-          border-radius: 126px;
-          overflow: hidden;
-          z-index: 1;
-        }
-        .pumpkin-line {
-          height: calc(100%);
-          border-style: solid;
-          border-color: #ea5621;
-          display: inline-block;
-          position: absolute;
-          top: -1px;
-        }
-        .line-left {
-          width: 67px;
-          border-radius: 314px 0 0 314px;
-          border-width: 2px 0 2px 6px;
-          left: 23px;
-        }
-        .line-center {
-          width: 35px;
-          border-radius: 50% 0 0 50%;
-          border-width: 2px 0 2px 5px;
-          left: 81px;
-        }
-        .line-center-right {
-          border-radius: 0 50% 50% 0;
-          border-width: 2px 5px 2px 0;
-          right: 45px;
-          width: 111px;
-        }
-        .line-right {
-          width: 67px;
-          border-radius: 0 314px 314px 0;
-          border-width: 3px 6px 3px 0;
-          right: 12px;
-        }
-        .shadow {
-          width: 175px;
-          height: 20px;
-          border-radius: 50%;
-          background-color: #dbdbdb;
-          top: 85px;
-          left: 8px;
-        }
+        position: relative;
+        padding-left: 92px;
+        height: 300px;
+      }
+      .wrapper * {
+        position: relative;
+      }
+      .pumpkin {
+        background-color: #ef871d;
+        width: 200px;
+        height: 157px;
+        top: 94px;
+        border-radius: 126px;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .pumpkin > * {
+        position: absolute;
+        display: inline-block;
+      }
+      .pumpkin-peel {
+        border-width: 15px 0 0 0;
+        border-color: #f6b93e;
+        border-style: solid;
+        content: '';
+        width: 130px;
+        height: 15px;
+        left: 35px;
+        top: -1px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .pumpkin-peel::before {
+        border-width: 0 0 15px 0;
+        border-color: #f6b93e;
+        border-style: solid;
+        content: '';
+        width: 130px;
+        height: 15px;
+        left: 0;
+        top: -15px;
+        border-radius: 50%;
+        z-index: 1;
+        position: absolute;
+      }
+      .pumpkin-hole {
+        border-width: 9px 0 0 0;
+        border-color: #be3d1e;
+        border-style: solid;
+        content: '';
+        width: 119px;
+        height: 9px;
+        left: 6px;
+        top: -9px;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .pumpkin-hole::before {
+        border-width: 0 0 9px 0;
+        border-color: #be3d1e;
+        border-style: solid;
+        content: '';
+        width: 119px;
+        height: 9px;
+        left: 0;
+        top: -9px;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+      }
+      .pumpkin-line {
+        height: calc(100%);
+        border-style: solid;
+        border-color: #ea5621;
+        display: inline-block;
+        position: absolute;
+        top: -1px;
+      }
+      .line-left {
+        width: 67px;
+        border-radius: 314px 0 0 314px;
+        border-width: 2px 0 2px 6px;
+        left: 23px;
+      }
+      .line-center {
+        width: 35px;
+        border-radius: 50% 0 0 50%;
+        border-width: 2px 0 2px 5px;
+        left: 81px;
+      }
+      .line-center-right {
+        border-radius: 0 50% 50% 0;
+        border-width: 2px 5px 2px 0;
+        right: 45px;
+        width: 111px;
+      }
+      .line-right {
+        width: 67px;
+        border-radius: 0 314px 314px 0;
+        border-width: 3px 6px 3px 0;
+        right: 12px;
+      }
+      .eye {
+        width: 0;
+        height: 0;
+        border-left: 19px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 29px solid #c03b1b;
+      }
+      .eye-inner {
+        top: 6px;
+        border-bottom: 23px solid #7d2308;
+        border-left: 16px solid transparent;
+      }
+      .eye-left {
+        left: 38px;
+        top: 32px;
+        transform: rotate(-3deg);
+      }
+      .eye-left-inner {
+        left: -13px;
+      }
+      .eye-right {
+        top: 34px;
+        right: 60px;
+        transform: rotate(8deg);
+      }
+      .eye-right-inner {
+        right: 13px;
+      }
+      .shadow {
+        width: 175px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #dbdbdb;
+        top: 85px;
+        left: 8px;
+      }
       </style>
       <div class="wrapper">
         <div class="pumpkin">
+          <div class="pumpkin-peel">
+            <div class="pumpkin-hole"></div>
+          </div>
           <div class="pumpkin-line line-left"></div>
           <div class="pumpkin-line line-center"></div>
           <div class="pumpkin-line line-center-right"></div>
           <div class="pumpkin-line line-right"></div>
+          <div class="eye eye-left">
+            <div class="eye eye-inner eye-left-inner"></div>
+          </div>
+          <div class="eye eye-right">
+            <div class="eye eye-inner eye-right-inner"></div>
+          </div>
         </div>
         <div class="shadow"></div>
       </div>
