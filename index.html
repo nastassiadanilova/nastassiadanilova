@@ -132,6 +132,37 @@
       .eye-right-inner {
         right: 13px;
       }
+      .mouth {
+        position: absolute;
+        border-radius: 0 0 30px 30px;
+        width: 118px;
+        height: 30px;
+        top: 98px;
+        background-color: #62150e;
+        left: 28px;
+      }
+      .mouth::before, .mouth::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 1px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 13px solid #ef871d;
+      }
+      .mouth:before {
+        left: 24%;
+      }
+      .mouth::after {
+        right: 24%;
+      }
+      /* .cat {
+        background-color: #06000b;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      } */
       .shadow {
         width: 175px;
         height: 20px;
@@ -146,7 +177,9 @@
     <div class="wrapper">
       <div class="pumpkin">
         <div class="pumpkin-peel">
-          <div class="pumpkin-hole"></div>
+          <div class="pumpkin-hole">
+            <!-- <div class="cat"></div> -->
+          </div>
         </div>
         <div class="pumpkin-line line-left"></div>
         <div class="pumpkin-line line-center"></div>
@@ -158,6 +191,7 @@
         <div class="eye eye-right">
           <div class="eye eye-inner eye-right-inner"></div>
         </div>
+        <div class="mouth"></div>
       </div>
       <div class="shadow"></div>
     </div>
