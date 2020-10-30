@@ -2,13 +2,14 @@
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        .wrapper {
+      .wrapper {
         position: relative;
-        padding-left: 92px;
+        padding-left: 50px;
         height: 300px;
+        width: 300px;
       }
       .wrapper * {
-        position: relative;
+        position: absolute;
       }
       .pumpkin {
         background-color: #ef871d;
@@ -30,8 +31,8 @@
         content: '';
         width: 130px;
         height: 15px;
-        left: 35px;
-        top: -1px;
+        left: 85px;
+        top: 93px;
         border-radius: 50%;
         z-index: 1;
       }
@@ -131,35 +132,146 @@
         transform: rotate(8deg);
       }
       .eye-right-inner {
-        right: 13px;
+        left: -13px;
+      }
+      .mouth {
+        position: absolute;
+        border-radius: 0 0 30px 30px;
+        width: 118px;
+        height: 30px;
+        top: 98px;
+        background-color: #62150e;
+        left: 28px;
+      }
+      .mouth::before, .mouth::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 1px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 13px solid #ef871d;
+      }
+      .mouth:before {
+        left: 24%;
+      }
+      .mouth::after {
+        right: 24%;
+      }
+      .cat {
+        background-color: #06000b;
+        width: 95px;
+        height: 64px;
+        z-index: 2;
+        top: -57px;
+        left: 14px;
+        border-radius: 50%;
+      }
+      .cat::after {
+        position: absolute;
+        content: '';
+        border-style: solid;
+        border-color: black;
+        border-width: 0 0 11px 0;
+        border-radius: 0 0 30px 30px;
+        width: 90px;
+        height: 41px;
+        top: 15px;
+        left: 3px;
+      }
+      .cat-ear {
+        top: -15px;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid black;
+      }
+      .cat-ear-left {
+        left: 7px;
+      }
+      .cat-ear-right {
+        left: 47px;
+      }
+      .cat-eye {
+        border-radius: 50%;
+        background-color: #f7c032;
+        width: 30px;
+        height: 28px;
+        top: 22px;
+        position: absolute;
+      }
+      .cat-eye-inner {
+        border-radius: 50%;
+        background-color: black;
+        width: 19px;
+        height: 19px;
+        bottom: 6px;
+      }
+      .cat-eye-left {
+        left: 9px;
+      }
+      .cat-eye-inner-left {
+        right: 2px;
+      }
+      .cat-eye-right {
+        left: 54px
+      }
+      .cat-eye-inner-right {
+        left: 2px;
+      }
+      .cat-nose {
+        top: 46px;
+        left: 42px;
+        width: 9px;
+        border-style: solid;
+        border-color: #e57281;
+        border-width: 1px 0 5px 0;
+        border-radius: 6px 6px 8px 8px;
+        height: 6px;
+        box-sizing: border-box;
       }
       .shadow {
         width: 175px;
         height: 20px;
         border-radius: 50%;
         background-color: #dbdbdb;
-        top: 85px;
-        left: 8px;
+        top: 241px;
+        left: 99px;
       }
       </style>
       <div class="wrapper">
-        <div class="pumpkin">
-          <div class="pumpkin-peel">
-            <div class="pumpkin-hole"></div>
-          </div>
-          <div class="pumpkin-line line-left"></div>
-          <div class="pumpkin-line line-center"></div>
-          <div class="pumpkin-line line-center-right"></div>
-          <div class="pumpkin-line line-right"></div>
-          <div class="eye eye-left">
-            <div class="eye eye-inner eye-left-inner"></div>
-          </div>
-          <div class="eye eye-right">
-            <div class="eye eye-inner eye-right-inner"></div>
+      <div class="pumpkin">
+        <div class="pumpkin-line line-left"></div>
+        <div class="pumpkin-line line-center"></div>
+        <div class="pumpkin-line line-center-right"></div>
+        <div class="pumpkin-line line-right"></div>
+        <div class="eye eye-left">
+          <div class="eye eye-inner eye-left-inner"></div>
+        </div>
+        <div class="eye eye-right">
+          <div class="eye eye-inner eye-right-inner"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+      <div class="pumpkin-peel">
+        <div class="pumpkin-hole">
+          <div class="cat">
+            <div class="cat-ear cat-ear-left"></div>
+            <div class="cat-ear cat-ear-right"></div>
+            <div class="cat-eye cat-eye-left">
+              <div class="cat-eye-inner cat-eye-inner-left"></div>
+            </div>
+            <div class="cat-eye cat-eye-right">
+              <div class="cat-eye-inner cat-eye-inner-right"></div>
+            </div>
+            <div class="cat-nose"></div>
           </div>
         </div>
-        <div class="shadow"></div>
       </div>
+      <div class="shadow"></div>
+    </div>
     </div>
   </foreignObject>
 </svg>
