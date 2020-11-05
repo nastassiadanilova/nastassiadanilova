@@ -1,8 +1,10 @@
-## 🎃 Happy halloween! 🎃
-
 ![](./halloween.svg)
 
-Made with CSS only. To be continued...
+🎃🎃🎃 Made with CSS only. To be continued...
+
+[![Visits Badge](https://badges.pufler.dev/visits/nastassiadanilova/nastassiadanilova)](https://badges.pufler.dev)
+[![Years Badge](https://badges.pufler.dev/years/nastassiadanilova)](https://badges.pufler.dev)
+[![Repos Badge](https://badges.pufler.dev/repos/nastassiadanilova)](https://badges.pufler.dev)
 
 <!--
 **nastassiadanilova/nastassiadanilova** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
