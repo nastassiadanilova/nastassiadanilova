@@ -1,10 +1,7 @@
-![](./halloween.svg)
+Hey 👋
 
-🎃🎃🎃 Made with CSS only. To be continued...
-
-[![Visits Badge](https://badges.pufler.dev/visits/nastassiadanilova/nastassiadanilova)](https://badges.pufler.dev)
-[![Years Badge](https://badges.pufler.dev/years/nastassiadanilova)](https://badges.pufler.dev)
-[![Repos Badge](https://badges.pufler.dev/repos/nastassiadanilova)](https://badges.pufler.dev)
+![nastassia danilova' GitHub stats](https://github-readme-stats.vercel.app/api?username=nastassiadanilova&show_icons=true&hide_title=true&hide_rank=true&hide=contribs)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nastassiadanilova&layout=compact)
 
 <!--
 **nastassiadanilova/nastassiadanilova** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
