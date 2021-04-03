@@ -1,8 +1,6 @@
 Hey 👋
 
-![nastassia danilova' GitHub stats](https://github-readme-stats.vercel.app/api?username=nastassiadanilova&show_icons=true&hide_title=true&hide_rank=true&hide=contribs)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nastassiadanilova&layout=compact)
-
+![nastassiadanilova' GitHub stats](https://github-readme-stats.vercel.app/api?username=nastassiadanilova&show_icons=true&hide_title=true&hide_rank=true) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nastassiadanilova&layout=compact)
 <!--
 **nastassiadanilova/nastassiadanilova** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
