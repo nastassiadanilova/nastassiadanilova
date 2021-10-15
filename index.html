@@ -1,0 +1,277 @@
+<html>
+  <head>
+    <style>
+      .wrapper {
+        position: relative;
+        padding-left: 50px;
+        height: 300px;
+        width: 300px;
+      }
+      .wrapper * {
+        position: absolute;
+      }
+      .pumpkin {
+        background-color: #ef871d;
+        width: 200px;
+        height: 157px;
+        top: 94px;
+        border-radius: 126px;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .pumpkin > * {
+        position: absolute;
+        display: inline-block;
+      }
+      .pumpkin-peel {
+        border-width: 15px 0 0 0;
+        border-color: #f6b93e;
+        border-style: solid;
+        content: '';
+        width: 130px;
+        height: 15px;
+        left: 85px;
+        top: 93px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .pumpkin-peel::before {
+        border-width: 0 0 15px 0;
+        border-color: #f6b93e;
+        border-style: solid;
+        content: '';
+        width: 130px;
+        height: 15px;
+        left: 0;
+        top: -15px;
+        border-radius: 50%;
+        z-index: 1;
+        position: absolute;
+      }
+      .pumpkin-hole {
+        border-width: 9px 0 0 0;
+        border-color: #be3d1e;
+        border-style: solid;
+        content: '';
+        width: 119px;
+        height: 9px;
+        left: 6px;
+        top: -9px;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .pumpkin-hole::before {
+        border-width: 0 0 9px 0;
+        border-color: #be3d1e;
+        border-style: solid;
+        content: '';
+        width: 119px;
+        height: 9px;
+        left: 0;
+        top: -9px;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+      }
+      .pumpkin-line {
+        height: calc(100%);
+        border-style: solid;
+        border-color: #ea5621;
+        display: inline-block;
+        position: absolute;
+        top: -1px;
+      }
+      .line-left {
+        width: 67px;
+        border-radius: 314px 0 0 314px;
+        border-width: 2px 0 2px 6px;
+        left: 23px;
+      }
+      .line-center {
+        width: 35px;
+        border-radius: 50% 0 0 50%;
+        border-width: 2px 0 2px 5px;
+        left: 81px;
+      }
+      .line-center-right {
+        border-radius: 0 50% 50% 0;
+        border-width: 2px 5px 2px 0;
+        right: 45px;
+        width: 111px;
+      }
+      .line-right {
+        width: 67px;
+        border-radius: 0 314px 314px 0;
+        border-width: 3px 6px 3px 0;
+        right: 12px;
+      }
+      .eye {
+        width: 0;
+        height: 0;
+        border-left: 19px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 29px solid #c03b1b;
+      }
+      .eye-inner {
+        top: 6px;
+        border-bottom: 23px solid #7d2308;
+        border-left: 16px solid transparent;
+      }
+      .eye-left {
+        left: 38px;
+        top: 32px;
+        transform: rotate(-3deg);
+      }
+      .eye-left-inner {
+        left: -13px;
+      }
+      .eye-right {
+        top: 34px;
+        right: 60px;
+        transform: rotate(8deg);
+      }
+      .eye-right-inner {
+        left: -13px;
+      }
+      .mouth {
+        position: absolute;
+        border-radius: 0 0 30px 30px;
+        width: 118px;
+        height: 30px;
+        top: 98px;
+        background-color: #62150e;
+        left: 28px;
+      }
+      .mouth::before, .mouth::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 1px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 13px solid #ef871d;
+      }
+      .mouth:before {
+        left: 24%;
+      }
+      .mouth::after {
+        right: 24%;
+      }
+      .cat {
+        background-color: #06000b;
+        width: 95px;
+        height: 64px;
+        z-index: 2;
+        top: -57px;
+        left: 14px;
+        border-radius: 50%;
+      }
+      .cat::after {
+        position: absolute;
+        content: '';
+        border-style: solid;
+        border-color: black;
+        border-width: 0 0 11px 0;
+        border-radius: 0 0 30px 30px;
+        width: 90px;
+        height: 41px;
+        top: 15px;
+        left: 3px;
+      }
+      .cat-ear {
+        top: -15px;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid black;
+      }
+      .cat-ear-left {
+        left: 7px;
+      }
+      .cat-ear-right {
+        left: 47px;
+      }
+      .cat-eye {
+        border-radius: 50%;
+        background-color: #f7c032;
+        width: 30px;
+        height: 28px;
+        top: 22px;
+        position: absolute;
+      }
+      .cat-eye-inner {
+        border-radius: 50%;
+        background-color: black;
+        width: 19px;
+        height: 19px;
+        bottom: 6px;
+      }
+      .cat-eye-left {
+        left: 9px;
+      }
+      .cat-eye-inner-left {
+        right: 2px;
+      }
+      .cat-eye-right {
+        left: 54px
+      }
+      .cat-eye-inner-right {
+        left: 2px;
+      }
+      .cat-nose {
+        top: 46px;
+        left: 42px;
+        width: 9px;
+        border-style: solid;
+        border-color: #e57281;
+        border-width: 1px 0 5px 0;
+        border-radius: 6px 6px 8px 8px;
+        height: 6px;
+        box-sizing: border-box;
+      }
+      .shadow {
+        width: 175px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #dbdbdb;
+        top: 241px;
+        left: 99px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="pumpkin">
+        <div class="pumpkin-line line-left"></div>
+        <div class="pumpkin-line line-center"></div>
+        <div class="pumpkin-line line-center-right"></div>
+        <div class="pumpkin-line line-right"></div>
+        <div class="eye eye-left">
+          <div class="eye eye-inner eye-left-inner"></div>
+        </div>
+        <div class="eye eye-right">
+          <div class="eye eye-inner eye-right-inner"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+      <div class="pumpkin-peel">
+        <div class="pumpkin-hole">
+          <div class="cat">
+            <div class="cat-ear cat-ear-left"></div>
+            <div class="cat-ear cat-ear-right"></div>
+            <div class="cat-eye cat-eye-left">
+              <div class="cat-eye-inner cat-eye-inner-left"></div>
+            </div>
+            <div class="cat-eye cat-eye-right">
+              <div class="cat-eye-inner cat-eye-inner-right"></div>
+            </div>
+            <div class="cat-nose"></div>
+          </div>
+        </div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </body>
+</html>
